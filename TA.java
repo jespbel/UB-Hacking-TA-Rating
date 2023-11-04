@@ -1,3 +1,4 @@
 public class TA {
-    private String name;
+    private String Name;
+
 }

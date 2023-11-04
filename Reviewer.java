@@ -1,12 +1,16 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Reviewer {
     private String reviewerID;
 
-    private ArrayList<TA> reviewed;
+    private HashMap<String, Array> reviewHistory;
+
 
     public Reviewer(String reviewerID, ArrayList<TA> reviewed) {
         this.reviewerID = reviewerID;
-        this.reviewed = reviewed;
+        this.reviewHistory = reviewHistory;
     }
 
     public String getReviewerID() {
@@ -17,11 +21,11 @@ public class Reviewer {
         this.reviewerID = reviewerID;
     }
 
-    public ArrayList<TA> getReviewed() {
-        return reviewed;
+    public HashMap<String, Array> getReviewHistory() {
+        return reviewHistory;
     }
 
-    public void setReviewed(ArrayList<TA> reviewed) {
-        this.reviewed = reviewed;
+    public void setReviewHistory(HashMap<String, Array> reviewHistory) {
+        this.reviewHistory = reviewHistory;
     }
 }
