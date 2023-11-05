@@ -13,7 +13,7 @@ public class Course {
     }
 
     public void setCourseName(String courseName) {
-        this.name = courseName;
+        this.courseName = courseName;
     }
 
     public ArrayList<TA> getStaff() {
