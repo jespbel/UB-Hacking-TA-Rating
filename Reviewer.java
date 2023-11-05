@@ -8,13 +8,13 @@ public class Reviewer {
     private HashMap<String, Array> reviewHistory;
 
 
-    public Reviewer(String reviewerID, ArrayList<TA> reviewed) {
+    public Reviewer(String reviewerID, HashMap<String, Array> reviewHistory) {
         this.reviewerID = reviewerID;
         this.reviewHistory = reviewHistory;
     }
 
     public String getReviewerID() {
-        return reviewerID;
+        return this.reviewerID;
     }
 
     public void setReviewerID(String reviewerID) {
@@ -22,7 +22,7 @@ public class Reviewer {
     }
 
     public HashMap<String, Array> getReviewHistory() {
-        return reviewHistory;
+        return this.reviewHistory;
     }
 
     public void setReviewHistory(HashMap<String, Array> reviewHistory) {
