@@ -1,11 +1,17 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Course {
     private String courseName;
-    private ArrayList<TA> staff;
+    private HashMap<String, TA> staff;
 
-    public Course (String courseName, ArrayList<TA> Staff){
+    public Course (String courseName){
         this.courseName = courseName;
-        this.staff = Staff;
+        this.staff = new HashMap<>();
+    }
+
+    public void addStaff(TA ta){
+        staff.put(ta.name, ta);
     }
 
     public String getCourseName() {
@@ -16,11 +22,11 @@ public class Course {
         this.courseName = courseName;
     }
 
-    public ArrayList<TA> getStaff() {
+    public HashMap<String, TA> getStaff() {
         return this.staff;
     }
 
-    public void setStaff(ArrayList<TA> staff) {
+    public void setStaff(HashMap<String, TA> staff) {
         this.staff = staff;
     }
 }

@@ -3,25 +3,25 @@ import java.util.*;
 import java.io.*;
 
 public class TA{
-    private String name;
+    public String name;
 
     private double totalRatings;
     private boolean goatBadge;
-    private double kindness;
+    public double kindness;
     private boolean kindnessBadge;
 
-    private double punctuality;
+    public double punctuality;
     private boolean punctualityBadge;
-    private double passion;
+    public double passion;
     private boolean passionBadge;
-    private double comedian;
+    public double comedian;
     private boolean comedianBadge;
-    private double knowledge;
+    public double knowledge;
     private boolean knowledgeBadge;
-    private double piazzaGod;
+    public double piazzaGod;
     private boolean piazzaGodBadge;
-    private double ohDweller;
-    private boolean ohDwellerBadge;
+    public double ohDweller;
+    public boolean ohDwellerBadge;
 
     public double getTotalRatings(){
         return this.totalRatings;
@@ -31,16 +31,125 @@ public class TA{
         this.name = name;
     }
 
-    public void computeAverage(ArrayList<Integer> user_input){
-        this.totalRatings = this.getTotalRatings() + 1.0;
-        this.kindness = (this.kindness/this.totalRatings) + (user_input.get(0)/this.totalRatings);
-        this.punctuality = (this.punctuality/this.totalRatings) + (user_input.get(1)/this.totalRatings);
-        this.passion = (this.passion/this.totalRatings) + (user_input.get(2)/this.totalRatings);
-        this.comedian = (this.comedian/this.totalRatings) + (user_input.get(3)/this.totalRatings);
-        this.knowledge = (this.knowledge/this.totalRatings) + (user_input.get(4)/this.totalRatings);
-        this.piazzaGod = (this.piazzaGod/this.totalRatings) + (user_input.get(5)/this.totalRatings);
-        this.ohDweller = (this.ohDweller/this.totalRatings) + (user_input.get(6)/this.totalRatings);
+    public TA (String name, Double kindness, Double punctuality, Double passion, Double comedian, Double knowledge, Double PiazzaGod, Double ohDweller){
+        if (kindness > 5){
+            kindness = 5.0;
+        }
+        if (punctuality > 5){
+            punctuality = 5.0;
+        }
+        if (passion > 5){
+            passion = 5.0;
+        }
+        if (comedian > 5){
+            comedian = 5.0;
+        }
+        if (knowledge > 5){
+            knowledge = 5.0;
+        }
+        if (PiazzaGod > 5){
+            PiazzaGod = 5.0;
+        }
+        if (ohDweller > 5){
+            ohDweller = 5.0;
+        }
+        if (kindness < 1){
+            kindness = 1.0;
+        }
+        if (punctuality < 1){
+            punctuality = 1.0;
+        }
+        if (passion < 1){
+            passion = 1.0;
+        }
+        if (comedian < 1){
+            comedian = 1.0;
+        }
+        if (knowledge < 1){
+            knowledge = 1.0;
+        }
+        if (PiazzaGod < 1){
+            PiazzaGod = 1.0;
+        }
+        if (ohDweller < 1){
+            ohDweller = 1.0;
+        }
+        this.name = name;
+        this.kindness = kindness;
+        this.punctuality = punctuality;
+        this.passion = passion;
+        this.comedian = comedian;
+        this.knowledge = knowledge;
+        this.piazzaGod = PiazzaGod;
+        this.ohDweller = ohDweller;
+        this.totalRatings = 1;
+//        computeAverage(kindness, punctuality, passion, comedian, knowledge, PiazzaGod, ohDweller);
     }
+
+//    public void computeAverage(Double kindness, Double punctuality, Double passion, Double comedian, Double knowledge, Double piazzaGod, Double ohDweller){
+//        this.totalRatings = this.getTotalRatings();
+//        this.kindness = (this.kindness/this.totalRatings) + (kindness/this.totalRatings);
+//        this.punctuality = (this.punctuality/this.totalRatings) + (punctuality/this.totalRatings);
+//        this.passion = (this.passion/this.totalRatings) + (passion/this.totalRatings);
+//        this.comedian = (this.comedian/this.totalRatings) + (comedian/this.totalRatings);
+//        this.knowledge = (this.knowledge/this.totalRatings) + (knowledge/this.totalRatings);
+//        this.piazzaGod = (this.piazzaGod/this.totalRatings) + (piazzaGod/this.totalRatings);
+//        this.ohDweller = (this.ohDweller/this.totalRatings) + (ohDweller/this.totalRatings);
+//    }
+
+    public void addRating(Double kindness, Double punctuality, Double passion, Double comedian, Double knowledge, Double piazzaGod, Double ohDweller){
+        if (kindness > 5){
+            kindness = 5.0;
+        }
+        if (punctuality > 5){
+            punctuality = 5.0;
+        }
+        if (passion > 5){
+            passion = 5.0;
+        }
+        if (comedian > 5){
+            comedian = 5.0;
+        }
+        if (knowledge > 5){
+            knowledge = 5.0;
+        }
+        if (piazzaGod > 5){
+            piazzaGod = 5.0;
+        }
+        if (ohDweller > 5){
+            ohDweller = 5.0;
+        }
+        if (kindness < 1){
+            kindness = 1.0;
+        }
+        if (punctuality < 1){
+            punctuality = 1.0;
+        }
+        if (passion < 1){
+            passion = 1.0;
+        }
+        if (comedian < 1){
+            comedian = 1.0;
+        }
+        if (knowledge < 1){
+            knowledge = 1.0;
+        }
+        if (piazzaGod < 1){
+            piazzaGod = 1.0;
+        }
+        if (ohDweller < 1){
+            ohDweller = 1.0;
+        }
+        this.totalRatings = this.getTotalRatings() + 1.0;
+        this.kindness = (this.kindness/this.totalRatings) + (kindness/this.totalRatings);
+        this.punctuality = (this.punctuality/this.totalRatings) + (punctuality/this.totalRatings);
+        this.passion = (this.passion/this.totalRatings) + (passion/this.totalRatings);
+        this.comedian = (this.comedian/this.totalRatings) + (comedian/this.totalRatings);
+        this.knowledge = (this.knowledge/this.totalRatings) + (knowledge/this.totalRatings);
+        this.piazzaGod = (this.piazzaGod/this.totalRatings) + (piazzaGod/this.totalRatings);
+        this.ohDweller = (this.ohDweller/this.totalRatings) + (ohDweller/this.totalRatings);
+    }
+
     public void computeBadge(){
         if (this.kindness >= 4.0) {
             this.kindnessBadge = true;
