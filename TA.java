@@ -23,8 +23,16 @@ public class TA{
     private double ohDweller;
     private boolean ohDwellerBadge;
 
+    public double getTotalRatings(){
+        return this.totalRatings;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
     public void computeAverage(ArrayList<Integer> user_input){
-        this.totalRatings = this.totalRatings + 1.0;
+        this.totalRatings = this.getTotalRatings() + 1.0;
         this.kindness = (this.kindness/this.totalRatings) + (user_input.get(0)/this.totalRatings);
         this.punctuality = (this.punctuality/this.totalRatings) + (user_input.get(1)/this.totalRatings);
         this.passion = (this.passion/this.totalRatings) + (user_input.get(2)/this.totalRatings);

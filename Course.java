@@ -9,7 +9,7 @@ public class Course {
     }
 
     public String getCourseName() {
-        return courseName;
+        return this.courseName;
     }
 
     public void setCourseName(String courseName) {
@@ -17,7 +17,7 @@ public class Course {
     }
 
     public ArrayList<TA> getStaff() {
-        return staff;
+        return this.staff;
     }
 
     public void setStaff(ArrayList<TA> staff) {
