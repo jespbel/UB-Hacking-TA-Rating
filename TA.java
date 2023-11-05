@@ -31,8 +31,16 @@ public class TA{
         this.name = name;
     }
 
-    public void computeAverage(ArrayList<Integer> user_input){
+    public void setTotalRatings(Double ratings){ this.totalRatings = ratings;}
+
+    public TA(String name, ArrayList<Integer> user_input){
+        this.name = name;
         this.totalRatings = this.getTotalRatings() + 1.0;
+        computeAverage(user_input);
+        computeBadge();
+    }
+
+    public void computeAverage(ArrayList<Integer> user_input){
         this.kindness = (this.kindness/this.totalRatings) + (user_input.get(0)/this.totalRatings);
         this.punctuality = (this.punctuality/this.totalRatings) + (user_input.get(1)/this.totalRatings);
         this.passion = (this.passion/this.totalRatings) + (user_input.get(2)/this.totalRatings);
