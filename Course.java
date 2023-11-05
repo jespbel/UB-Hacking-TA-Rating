@@ -1,19 +1,19 @@
 import java.util.ArrayList;
 public class Course {
-    private String name;
+    private String courseName;
     private ArrayList<TA> staff;
 
-    public Course (String name, ArrayList<TA> Staff){
-        this.name = name;
+    public Course (String courseName, ArrayList<TA> Staff){
+        this.courseName = courseName;
         this.staff = Staff;
     }
 
-    public String getName() {
-        return name;
+    public String getCourseName() {
+        return courseName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCourseName(String courseName) {
+        this.name = courseName;
     }
 
     public ArrayList<TA> getStaff() {
